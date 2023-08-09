@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Reorder Payment Methods"
+client_id = "2b130cf8ca7d9de192a48c9742af8aba"
+application_url = "https://congressional-supplies-ordinary-cookies.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_payment_customizations,read_payment_customizations"
+
+[auth]
+redirect_urls = [
+  "https://congressional-supplies-ordinary-cookies.trycloudflare.com/auth/callback",
+  "https://congressional-supplies-ordinary-cookies.trycloudflare.com/auth/shopify/callback",
+  "https://congressional-supplies-ordinary-cookies.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "siar-app-test.myshopify.com"

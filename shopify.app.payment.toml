@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "Reorder Payment Gateway"
+client_id = "683fd2071fd9176f4629276617afc102"
+application_url = "https://twiki-judges-col-ja.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_payment_customizations,read_payment_customizations"
+
+[auth]
+redirect_urls = [
+  "https://twiki-judges-col-ja.trycloudflare.com/auth/callback",
+  "https://twiki-judges-col-ja.trycloudflare.com/auth/shopify/callback",
+  "https://twiki-judges-col-ja.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "siar-apps-test.myshopify.com"
